@@ -32,8 +32,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
 		when '/start', '/start start'
 			bot.api.send_message(
 				chat_id: message.chat.id,
-                text: "Здравствуй, #{message.from.first_name}",
-                text: "Какой вопрос тебя интересует?"
+                text: "Здравствуй, #{message.from.first_name}. Какой вопрос тебя интересует?"
 				)
 		else
 			bot.api.send_message(
